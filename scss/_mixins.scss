@@ -1,0 +1,3 @@
+@use "variables" as v;
+@mixin panel { background: v.$surface; border: 1px solid #e1e6ef; border-radius: v.$radius; padding: v.$space * 1.5; }
+@mixin focus { outline: 3px solid v.$accent; outline-offset: 3px; }

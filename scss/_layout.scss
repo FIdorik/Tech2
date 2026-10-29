@@ -1,0 +1,22 @@
+@use "variables" as v;
+@use "mixins" as m;
+.container { width: min(v.$container, 100% - v.$space * 3); margin-inline: auto; }
+.header { background: v.$surface; border-bottom: 1px solid #e1e6ef;
+ &__inner { display: flex; justify-content: space-between; align-items: center; gap: v.$space; min-height: 80px; }
+}
+.hero { padding-block: v.$space * 4; max-width: 760px; }
+.layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: v.$space * 2; align-items: start; }
+.catalog { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: v.$space; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: v.$space; margin-bottom: v.$space; flex-wrap: wrap;
+ p { margin: 0; } label { display: flex; align-items: center; gap: 8px; } select { width: auto; }
+}
+.info { @include m.panel; margin-top: v.$space * 3; }
+.footer { padding-block: v.$space * 2; }
+@media (max-width: 1100px) { .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) {
+ .layout { grid-template-columns: 1fr; }
+ .container { width: calc(100% - v.$space * 2); }
+ .catalog { grid-template-columns: 1fr; }
+ .hero { padding-block: v.$space * 2; }
+ .header__inner { flex-wrap: wrap; padding-block: v.$space; }
+}

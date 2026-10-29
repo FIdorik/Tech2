@@ -1,0 +1,19 @@
+@use "sass:color";
+@use "variables" as v;
+@use "mixins" as m;
+.brand { font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+.badge { display: inline-block; color: v.$accent; background: color.mix(v.$surface, v.$accent, 92%); border-radius: v.$radius; padding: 4px 10px; font-size: .8rem; }
+.filters { @include m.panel; display: grid; gap: 10px;
+ h2 { margin-bottom: 8px; } .button { margin-top: v.$space; }
+}
+.button { cursor: pointer; padding: 10px 16px; border-radius: v.$radius * .5; border: 1px solid v.$accent;
+ &--secondary { color: v.$accent; background: v.$surface; }
+ &:hover { background: color.mix(v.$surface, v.$accent, 92%); }
+}
+.card { @include m.panel; padding: v.$space; min-width: 0; transition: box-shadow .2s;
+ img { display: block; width: 100%; height: 150px; object-fit: contain; margin-bottom: v.$space; }
+ h2 { margin-block: v.$space; overflow-wrap: anywhere; }
+ &__meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+ &:hover { box-shadow: 0 8px 24px #1f293714; }
+}
+#message:not(:empty) { @include m.panel; }

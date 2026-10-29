@@ -1,0 +1,11 @@
+@use "variables" as v;
+@use "mixins" as m;
+* { box-sizing: border-box; }
+body { margin: 0; background: v.$background; color: v.$text; font: 16px/1.6 system-ui, sans-serif; }
+a { color: inherit; }
+h1, h2, p { margin-top: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: v.$space; }
+h2 { font-size: 1.15rem; }
+input, select, button { font: inherit; max-width: 100%; }
+input, select { width: 100%; padding: 10px; border: 1px solid #bac4d5; border-radius: v.$radius * .5; background: v.$surface; color: v.$text; }
+:focus-visible { @include m.focus; }
