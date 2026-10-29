@@ -1,0 +1,1 @@
+{"name":"trpo-pr02-catalog","version":"1.0.0","private":true,"type":"module","scripts":{"build":"sass scss/styles.scss css/styles.css --no-source-map","watch":"sass --watch scss/styles.scss:css/styles.css --no-source-map","start":"node scripts/server.js","test":"node --test"},"devDependencies":{"sass":"1.93.2"}}

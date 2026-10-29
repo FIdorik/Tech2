@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Учебная полка — каталог</title><link rel="stylesheet" href="css/styles.css"><script type="module" src="js/app.js"></script></head>
+<body>
+<header class="header"><div class="container header__inner"><a class="brand" href="./">▦ Учебная полка</a><a href="#about">О каталоге</a></div></header>
+<main class="container">
+<section class="hero"><span class="badge">Материалы для развития</span><h1>Всё для следующего шага</h1><p>Книги, курсы и инструменты в одном учебном каталоге.</p></section>
+<div class="layout">
+<form class="filters" id="filters"><h2>Подобрать материалы</h2><label for="search">Название</label><input id="search" type="search" placeholder="Найти товар">
+<label for="category">Категория</label><select id="category"><option value="">Все категории</option></select>
+<label for="price">Цена до, ₽</label><input id="price" type="number" min="0" step="1" placeholder="Без ограничения">
+<label for="rating">Минимальный рейтинг</label><select id="rating"><option value="0">Любой</option><option value="4">От 4,0</option><option value="4.5">От 4,5</option></select>
+<button class="button button--secondary" type="reset">Сбросить фильтры</button></form>
+<section aria-label="Каталог товаров"><div class="toolbar"><p id="count" role="status">Загрузка каталога…</p><label>Сортировка <select id="sort"><option value="id">По порядку</option><option value="price">Сначала дешевле</option><option value="rating">По рейтингу</option></select></label></div><div id="message" role="status"></div><div class="catalog" id="catalog"></div></section>
+</div>
+<section class="info" id="about"><h2>Учиться удобнее, когда всё под рукой</h2><p>Каталог использует 18 записей из catalog.csv. Названия, категории, цены и рейтинги взяты из исходного набора данных. Иллюстрация определяется категорией товара.</p></section>
+</main><footer class="container footer">Практическая работа №2 · HTML, Grid, Flexbox и SCSS</footer>
+</body></html>
